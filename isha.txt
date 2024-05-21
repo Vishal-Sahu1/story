@@ -1,0 +1,46 @@
+The error message you're encountering indicates that the Git command-line tool is not recognized on your system. This typically happens because Git is not installed, or the system's PATH environment variable is not configured correctly to include Git's executable.
+
+Here are the steps to resolve this issue:
+
+1. Install Git
+If Git is not installed on your system, you need to download and install it.
+
+For Windows:
+Go to the Git for Windows website.
+Download the installer.
+Run the installer and follow the prompts. Make sure to select the option to add Git to your PATH environment variable during the installation process.
+2. Verify Installation
+After installation, you need to verify that Git is installed and properly added to your PATH.
+
+Open a new Command Prompt (cmd) or PowerShell window and run the following command:
+sh
+Copy code
+git --version
+This should display the installed version of Git. If it doesn't, Git might not have been added to your PATH correctly.
+3. Add Git to the PATH (if necessary)
+If Git is installed but not recognized, you may need to manually add it to your PATH environment variable.
+
+For Windows:
+Press Win + X and select "System" from the menu.
+Click on "Advanced system settings".
+In the System Properties window, click on the "Environment Variables" button.
+In the Environment Variables window, find the "Path" variable in the "System variables" section and select it, then click "Edit".
+Click "New" and add the path to the Git bin directory (e.g., C:\Program Files\Git\bin).
+Click "OK" to close all dialog boxes.
+4. Restart PowerShell
+After adding Git to your PATH, close and reopen PowerShell to ensure the changes take effect.
+
+5. Initialize Git Repository
+Now you can try initializing your Git repository again:
+
+sh
+Copy code
+git init
+This should work without errors if Git is correctly installed and configured on your system.
+
+
+
+
+
+
+
